@@ -2,6 +2,19 @@
   background-color: #38414A;
 }
 
+.sidebar{
+  width: 4.5%;
+  background-color: #FFFFFF;
+}
+.sidebarGrande{
+  width: 15%;
+  background-color: #FFFFFF;
+}
+
+.cursor-pointer:hover{
+  cursor: pointer;
+}
+
 
 @media (min-width: 768px) {
   .contenedor-app {
