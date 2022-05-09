@@ -6,7 +6,7 @@ import { icono_auriculares, icono_basurero, icono_engranaje, icono_grafico, icon
 
 
 
-const NavBar = ({ sidebarDesplegado, setSidebarDesplegado }) => {
+const NavBar = ({ sidebarDesplegado, setSidebarDesplegado, mostrarOcultarSidebar }) => {
 
     const [fullScreen, setFullScreen] = useState(false)
 
@@ -84,6 +84,7 @@ const NavBar = ({ sidebarDesplegado, setSidebarDesplegado }) => {
                     </Form>
                     <Nav className="">
                         <Nav.Link className='text-secondary' onClick={() => setFullScreen_()}>{fullScreen ? icono_comprimir : icono_expandir}</Nav.Link>
+                        <Nav.Link className='text-secondary' onClick={() => mostrarOcultarSidebar()}>{icono_engranaje}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

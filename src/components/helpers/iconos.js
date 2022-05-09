@@ -17,7 +17,8 @@ import {
     faCartShopping,
     faSatelliteDish,
     faChevronDown,
-    faChevronRight
+    faChevronRight,
+    faCog
  } from "@fortawesome/free-solid-svg-icons";
 
 export const icono_basurero = <FontAwesomeIcon className="fa-sm" icon={faTrash} />;
@@ -35,7 +36,7 @@ export const icono_chat = <FontAwesomeIcon className="fa-sm" icon={faMessage} />
 export const icono_carro = <FontAwesomeIcon className="fa-sm" icon={faCartShopping} />;
 export const icono_antena = <FontAwesomeIcon className="fa-sm" icon={faSatelliteDish} />;
 export const icono_aflechita_abajo = <FontAwesomeIcon className="fa-sm" icon={faChevronDown} />;
-export const icono_aflechita_derecha = <FontAwesomeIcon className="fa-sm" icon={faChevronRight} />;
+export const icono_aflechita_derecha = <FontAwesomeIcon className="fa-sm" icon={faChevronRight} />
 
 
 

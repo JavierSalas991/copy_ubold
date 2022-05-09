@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../common/NavBar';
 import Configuracion from './Configuracion';
+import Configuraciones from './Configuraciones';
 import Sidebar from './Sidebar';
 
 const Inicio = () => {
@@ -9,21 +10,21 @@ const Inicio = () => {
     const [posicionX, setX] = useState(-widthConfiguracion);
 
     const mostrarOcultarSidebar = () => {
-        if (posicionX < 0) {
+        if (posicionX > 0) {
             setX(0);
         } else {
-            setX(-widthConfiguracion);
+            setX(widthConfiguracion);
         }
     };
     
     useEffect(() => {
-        setX(-widthConfiguracion);
+        setX(widthConfiguracion);
     }, []);
 
     const [sidebarDesplegado, setSidebarDesplegado] = useState(true)
     return (
         <div id='inicio_'>
-            <NavBar sidebarDesplegado={sidebarDesplegado} setSidebarDesplegado={setSidebarDesplegado}></NavBar>
+            <NavBar sidebarDesplegado={sidebarDesplegado} setSidebarDesplegado={setSidebarDesplegado} mostrarOcultarSidebar={mostrarOcultarSidebar}></NavBar>
 
             <div className='contenedor-app'>
 
@@ -40,7 +41,7 @@ const Inicio = () => {
             </div>
             <div className='contenedor_sidebar'>
                 <Configuracion posicionX={posicionX} setX={setX} width={widthConfiguracion} height={''}>
-                    <p>prueba</p>
+                    <Configuraciones></Configuraciones>
                 </Configuracion>
             </div>
         </div>

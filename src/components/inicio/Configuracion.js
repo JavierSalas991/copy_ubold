@@ -18,7 +18,8 @@ const Configuracion = ({ width, children, posicionX, setX }) => {
                     borderRight: "1px solid",
                     borderRadius: "0",
                     borderColor: "rgb(160, 160, 160)",
-                    backgroundColor: "#f3f2f2"
+                    backgroundColor: "#f3f2f2",
+                    transition: "0.2s"
                 }}
             >
                 <div className="content">{children}</div>
