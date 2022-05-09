@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-const Configuracion = ({ width, children }) => {
+const Configuracion = ({ width, children, posicionX, setX }) => {
 
-    const [xPosition, setX] = useState(-width);
-
-    const mostrarOcultarSidebar = () => {
-        if (xPosition < 0) {
-            setX(0);
-        } else {
-            setX(-width);
-        }
-    };
-
-    useEffect(() => {
-        setX(0);
-    }, []);
     return (
         <React.Fragment>
             <div
                 style={{
-                    transform: `translatex(${xPosition}px)`,
+                    transform: `translatex(${posicionX}px)`,
                     width: width,
                     minHeight: "100%",
                     position: "absolute",

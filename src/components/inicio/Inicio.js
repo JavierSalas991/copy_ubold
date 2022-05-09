@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../common/NavBar';
 import Configuracion from './Configuracion';
 import Sidebar from './Sidebar';
 
 const Inicio = () => {
+
+    let widthConfiguracion  = 270;
+    const [posicionX, setX] = useState(-widthConfiguracion);
+
+    const mostrarOcultarSidebar = () => {
+        if (posicionX < 0) {
+            setX(0);
+        } else {
+            setX(-widthConfiguracion);
+        }
+    };
+    
+    useEffect(() => {
+        setX(-widthConfiguracion);
+    }, []);
 
     const [sidebarDesplegado, setSidebarDesplegado] = useState(true)
     return (
@@ -24,7 +39,7 @@ const Inicio = () => {
 
             </div>
             <div className='contenedor_sidebar'>
-                <Configuracion width={270} height={''}>
+                <Configuracion posicionX={posicionX} setX={setX} width={widthConfiguracion} height={''}>
                     <p>prueba</p>
                 </Configuracion>
             </div>
