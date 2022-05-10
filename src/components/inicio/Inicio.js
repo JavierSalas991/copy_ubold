@@ -6,8 +6,8 @@ import Sidebar from './Sidebar';
 
 const Inicio = () => {
 
-    let widthConfiguracion  = 270;
-    const [posicionX, setX] = useState(-widthConfiguracion);
+    let widthConfiguracion = 260;
+    const [posicionX, setX] = useState(widthConfiguracion);
 
     const mostrarOcultarSidebar = () => {
         if (posicionX > 0) {
@@ -16,28 +16,41 @@ const Inicio = () => {
             setX(widthConfiguracion);
         }
     };
-    
+
+    useEffect(() => {
+      console.log(posicionX)
+    }, [posicionX])
+
+    const cerrarSideBar = () => {
+        if (posicionX === 0){
+            setX(widthConfiguracion);
+        }
+    }
+
     useEffect(() => {
         setX(widthConfiguracion);
     }, []);
 
     const [sidebarDesplegado, setSidebarDesplegado] = useState(true)
+    
     return (
         <div id='inicio_'>
-            <NavBar sidebarDesplegado={sidebarDesplegado} setSidebarDesplegado={setSidebarDesplegado} mostrarOcultarSidebar={mostrarOcultarSidebar}></NavBar>
+            <div onClick={() => cerrarSideBar()}  style={{opacity: posicionX === 0? '0.85' : '1'}}>
 
-            <div className='contenedor-app'>
+                <NavBar sidebarDesplegado={sidebarDesplegado} setSidebarDesplegado={setSidebarDesplegado} mostrarOcultarSidebar={mostrarOcultarSidebar}></NavBar>
 
-                <Sidebar sidebarDesplegado={sidebarDesplegado}></Sidebar>
+                <div className='contenedor-app'>
 
-                <div className='seccion-principal' style={{ backgroundColor: '#F4F5F7' }}>
-                    {/* <Barra></Barra> */}
-                    <main>
+                    <Sidebar sidebarDesplegado={sidebarDesplegado}></Sidebar>
+
+                    <div className='seccion-principal' style={{ backgroundColor: '#F4F5F7' }}>
+                        <main>
 
 
-                    </main>
+                        </main>
+                    </div>
+
                 </div>
-
             </div>
             <div className='contenedor_sidebar'>
                 <Configuracion posicionX={posicionX} setX={setX} width={widthConfiguracion} height={''}>

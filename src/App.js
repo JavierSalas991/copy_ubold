@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="inicio" element={<Inicio />} />
+        <Route path="inicio/dashboards" element={<Inicio />} />
       </Routes>
     </BrowserRouter>
   );

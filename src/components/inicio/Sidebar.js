@@ -1,5 +1,5 @@
 import React from 'react';
-import { icono_antena, icono_calendario, icono_carro, icono_chat, icono_dashboards } from '../helpers/iconos';
+import { icono_antena, icono_calendario, icono_carro, icono_chat, icono_dashboards, icono_tabla } from '../helpers/iconos';
 import ItemSidebar from './ItemSidebar';
 
 const Sidebar = ({ sidebarDesplegado }) => {
@@ -39,6 +39,14 @@ const Sidebar = ({ sidebarDesplegado }) => {
             cartel: {
                 nombre: "Hot",
                 color: "pink"
+            }
+        },
+        {
+            titulo: 'Layouts',
+            icono: icono_tabla,
+            cartel: {
+                nombre: "New",
+                color: "#4A81D4"
             }
         },
 

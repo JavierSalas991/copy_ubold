@@ -19,7 +19,7 @@ const ItemSidebar = ({ opcion }) => {
                 <p className='text-secondary'>{opcion.icono}  {opcion.titulo}</p>
                 {opcion.cartel ?
                     <p
-                        style={{ backgroundColor: opcion.cartel.color, borderRadius: '4px', color: "#fff", fontSize: '80%', padding: '0 3%' }}
+                        style={{ backgroundColor: opcion.cartel.color, borderRadius: '4px', color: "#fff", fontSize: '80%', width:'18%', height: '5%', textAlign: 'center' }}
                     >
                         <strong>{opcion.cartel.nombre}</strong></p>
                     : null}

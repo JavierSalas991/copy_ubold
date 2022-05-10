@@ -15,6 +15,13 @@
   cursor: pointer;
 }
 
+.contenedor_sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
 
 @media (min-width: 768px) {
   .contenedor-app {
