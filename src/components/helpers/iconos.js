@@ -20,8 +20,15 @@ import {
     faChevronRight,
     faCog,
     faList,
-    faTableList
+    faTableList,
+    faArrowsRotate,
+    faWifi
  } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faHeart,
+    faEye
+ } from "@fortawesome/free-regular-svg-icons";
+
 
 export const icono_basurero = <FontAwesomeIcon className="fa-sm" icon={faTrash} />;
 export const icono_project = <FontAwesomeIcon className="fa-sm" icon={faAlignJustify} />;
@@ -43,6 +50,10 @@ export const icono_aflechita_abajo = <FontAwesomeIcon className="fa-sm" icon={fa
 export const icono_aflechita_derecha = <FontAwesomeIcon className="fa-sm" icon={faChevronRight} />;
 export const icono_lista_grande = <FontAwesomeIcon className="fa-xl" icon={faList} />;
 export const icono_tabla = <FontAwesomeIcon className="fa-sm" icon={faTableList} />;
+export const icono_recargar = <FontAwesomeIcon className="fa-sm" icon={faArrowsRotate} />;
+export const icono_wifi = <FontAwesomeIcon className="fa-sm" icon={faWifi} />;
+export const icono_corazon = <FontAwesomeIcon className="fa-sm" icon={faHeart} />;
+export const icono_ojo = <FontAwesomeIcon className="fa-sm" icon={faEye} />;
 
 
 

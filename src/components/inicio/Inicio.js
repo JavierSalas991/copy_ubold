@@ -4,7 +4,7 @@ import Configuracion from './Configuracion';
 import Configuraciones from './Configuraciones';
 import Sidebar from './Sidebar';
 
-const Inicio = () => {
+const Inicio = ({ children }) => {
 
     let widthConfiguracion = 260;
     const [posicionX, setX] = useState(widthConfiguracion);
@@ -18,11 +18,11 @@ const Inicio = () => {
     };
 
     useEffect(() => {
-      console.log(posicionX)
+        console.log(posicionX)
     }, [posicionX])
 
     const cerrarSideBar = () => {
-        if (posicionX === 0){
+        if (posicionX === 0) {
             setX(widthConfiguracion);
         }
     }
@@ -32,21 +32,20 @@ const Inicio = () => {
     }, []);
 
     const [sidebarDesplegado, setSidebarDesplegado] = useState(true)
-    
+
     return (
         <div id='inicio_'>
-            <div onClick={() => cerrarSideBar()}  style={{opacity: posicionX === 0? '0.85' : '1'}}>
+            <div onClick={() => cerrarSideBar()} style={{ filter: posicionX === 0 ? 'brightness(75%)' : 'brightness(100%)' }}>
 
                 <NavBar sidebarDesplegado={sidebarDesplegado} setSidebarDesplegado={setSidebarDesplegado} mostrarOcultarSidebar={mostrarOcultarSidebar}></NavBar>
 
-                <div className='contenedor-app'>
+                <div className='contenedor-app d-flex'>
 
                     <Sidebar sidebarDesplegado={sidebarDesplegado}></Sidebar>
 
                     <div className='seccion-principal' style={{ backgroundColor: '#F4F5F7' }}>
                         <main>
-
-
+                            {children}
                         </main>
                     </div>
 

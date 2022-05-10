@@ -22,6 +22,22 @@
   height: 100%;
 }
 
+.botones-azules{
+  background-color: #4A80D3;
+  border: none;
+  color: #FFFFFF;
+  width: 40px;
+  height: 30px;
+  border-radius: 4px;
+}
+.botones-azules:hover{
+  background-color: #3b72c5;
+}
+
+.seccion-principal {
+  flex: 1;
+}
+
 
 @media (min-width: 768px) {
   .contenedor-app {
@@ -33,8 +49,6 @@
       background-color: var(--blanco);
       flex: 0 0 300px;
   }
-  .seccion-principal {
-      flex: 1;
-  }
+ 
 
 }
