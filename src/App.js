@@ -9,7 +9,7 @@ function App(history) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="inicio/dashboards" element={
+        <Route path="inicio/dashboards/dashboard1" element={
           <Inicio>
             <Dashboard1></Dashboard1>
           </Inicio>

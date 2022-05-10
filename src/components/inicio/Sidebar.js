@@ -8,10 +8,10 @@ const Sidebar = ({ sidebarDesplegado }) => {
         {
             titulo: 'Dashboards',
             opciones: [
-                'Dashboard 1',
-                'Dashboard 2',
-                'Dashboard 3',
-                'Dashboard 4'
+                'Dashboard1',
+                'Dashboard2',
+                'Dashboard3',
+                'Dashboard4'
             ],
             icono: icono_dashboards,
         },

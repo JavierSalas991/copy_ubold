@@ -17,8 +17,8 @@ const ItemSidebar = ({ opcion }) => {
         }
     }
 
-    const redireccionarDesdeOpciones = (titulo) => {
-        navigate(`/inicio/${titulo.toLowerCase()}`);
+    const redireccionarDesdeOpciones = (opcion, item) => {
+        navigate(`/inicio/${opcion.titulo.toLowerCase()}/${item.toLowerCase()}`);
     }
     const redireccionar = (opcion) => {
         if (!opcion.opciones) {
@@ -43,7 +43,7 @@ const ItemSidebar = ({ opcion }) => {
             {opcion.opciones && mostrarOpciones ?
                 opcion.opciones.map((item) => {
                     return (
-                        <p onClick={() => redireccionarDesdeOpciones(opcion.titulo)} className='text-secondary ms-4 cursor-pointer'>{item}</p>
+                        <p onClick={() => redireccionarDesdeOpciones(opcion, item)} className='text-secondary ms-4 cursor-pointer'>{item}</p>
                     )
                 })
                 : null}

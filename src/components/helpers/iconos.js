@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { 
     faTrash,
-    faRectangleList,
     faUser,
     faAlignJustify,
     faChartColumn,
@@ -18,11 +17,12 @@ import {
     faSatelliteDish,
     faChevronDown,
     faChevronRight,
-    faCog,
     faList,
     faTableList,
     faArrowsRotate,
-    faWifi
+    faWifi,
+    faArrowDown,
+    faArrowUp
  } from "@fortawesome/free-solid-svg-icons";
 import { 
     faHeart,
@@ -34,11 +34,11 @@ export const icono_basurero = <FontAwesomeIcon className="fa-sm" icon={faTrash} 
 export const icono_project = <FontAwesomeIcon className="fa-sm" icon={faAlignJustify} />;
 export const icono_usuario = <FontAwesomeIcon className="fa-sm" icon={faUser} />;
 export const icono_grafico = <FontAwesomeIcon className="fa-sm" icon={faChartColumn} />;
-export const icono_engranaje = <FontAwesomeIcon className="fa-sm" icon={faGear} />;
+export const icono_engranaje = <FontAwesomeIcon className="fa-lg" icon={faGear} />;
 export const icono_engranaje_grande = <FontAwesomeIcon className="fa-xl" icon={faGear} />;
 export const icono_auriculares = <FontAwesomeIcon className="fa-sm" icon={faHeadset} />;
-export const icono_expandir = <FontAwesomeIcon className="fa-sm" icon={faExpand} />;
-export const icono_comprimir = <FontAwesomeIcon className="fa-sm" icon={faCompress} />;
+export const icono_expandir = <FontAwesomeIcon className="fa-lg" icon={faExpand} />;
+export const icono_comprimir = <FontAwesomeIcon className="fa-lg" icon={faCompress} />;
 export const icono_hamb = <FontAwesomeIcon className="fa-sm" icon={faGripLines} />;
 export const icono_dashboards = <FontAwesomeIcon className="fa-sm" icon={faChartArea} />;
 export const icono_calendario = <FontAwesomeIcon className="fa-sm" icon={faCalendar} />;
@@ -54,6 +54,8 @@ export const icono_recargar = <FontAwesomeIcon className="fa-sm" icon={faArrowsR
 export const icono_wifi = <FontAwesomeIcon className="fa-sm" icon={faWifi} />;
 export const icono_corazon = <FontAwesomeIcon className="fa-sm" icon={faHeart} />;
 export const icono_ojo = <FontAwesomeIcon className="fa-sm" icon={faEye} />;
+export const icono_flecha_abajo = <FontAwesomeIcon className="fa-sm" icon={faArrowDown} />;
+export const icono_flecha_arriba = <FontAwesomeIcon className="fa-sm" icon={faArrowUp} />;
 
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { icono_carro, icono_corazon, icono_hamb, icono_ojo, icono_recargar, icono_wifi } from '../helpers/iconos';
+import { icono_carro, icono_corazon, icono_flecha_abajo, icono_flecha_arriba, icono_hamb, icono_ojo, icono_recargar, icono_wifi } from '../helpers/iconos';
+import { VictoryPie } from 'victory';
 
 const Dashboard1 = () => {
 
@@ -62,7 +63,7 @@ const Dashboard1 = () => {
                                     width: "70px",
                                     height: "70px"
                                 }}
-                                className='d-flex justify-content-center align-items-center'
+                                    className='d-flex justify-content-center align-items-center'
                                 >
                                     {item.icono}
                                 </div>
@@ -75,12 +76,54 @@ const Dashboard1 = () => {
                     )
                 })}
             </div>
-            <div className='row'>
-                <div className='col-sm-12 col-md-4'>
+            <div className='row mt-2'>
+                <div className='col-sm-12 col-lg-4 px-3 py-2'>
+                    <div className='p-4 bg-white d-flex flex-column align-items-center h-100'>
+                        <div className='w-100'>
+                            <p>Total Revenue</p>
+                        </div>
+                        <div className='w-50'>
+                            <VictoryPie
+                                innerRadius={125}
+                                colorScale={['#F06B7F', '#EDEFF1']}
+                                style={{
+                                    labels: {
+                                        fontSize: 0, fill: "black"
+                                    }
+                                }}
+                                data={[
+                                    { x: "Cats", y: 6.8 },
+                                    { x: "Dogs", y: 3.2 }
+                                ]}
+                            />
+                        </div>
+                        <p className='text-secondary'>Total sales made today</p>
+                        <p style={{ fontSize: '200%' }}>$178</p>
+                        <p style={{ fontSize: '80%' }} className='text-secondary text-center'>Traditional heading elements are designed to work best in the meat of your page...</p>
+                        <div className='d-flex justify-content-around w-100 mt-2'>
+                            <div className=''>
+                                <p className='text-secondary mb-1'>Target</p>
+                                <p><span className='text-danger'>{icono_flecha_abajo}</span> $7.8k</p>
+                            </div>
+                            <div className=''>
+                                <p className='text-secondary mb-1'>Target</p>
+                                <p><span className='text-success'>{icono_flecha_arriba}</span> $7.8k</p>
+                            </div>
+                            <div className='text-center'>
+                                <p className='text-secondary mb-1'>Target</p>
+                                <p><span className='text-danger'>{icono_flecha_abajo}</span> $7.8k</p>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
-                <div className='col-sm-12 col-md-8'>
+                <div className='col-sm-12 col-lg-8 px-3 py-2'>
+                    <div className='p-4 bg-white d-flex flex-column align-items-center h-100'>
+                        <div className='w-100'>
+                            <p>Sales Analytics</p>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>
